@@ -1,0 +1,121 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte global */
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para o header */
+header {
+    background: #ff77ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Estilo para a seção chamada */
+.chamada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffccff;
+    margin-top: 20px;
+}
+
+.chamada-texto h1 {
+    font-size: 2.5rem;
+    color: #330033;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.chamada-texto p {
+    font-size: 1.2rem;
+    color: #ff66cc;
+    font-style: italic;
+}
+
+/* Vídeo incorporado */
+.chamada iframe {
+    border-radius: 8px;
+}
+
+/* Estilo para a seção de categoria */
+.categoria {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.categoria h2 {
+    font-size: 2rem;
+    color: #330033;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos vídeos */
+.categoria-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.categoria-videos a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-videos img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre as imagens */
+.categoria-videos a:hover img {
+    transform: scale(1.05);
+}
+
+.categoria-videos a:focus img {
+    outline: 2px solid #ff66cc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chamada {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chamada-texto h1 {
+        font-size: 2rem;
+    }
+
+    .categoria-videos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoria-videos {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        font-size: 1.8rem;
+    }
+}
